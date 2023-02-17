@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&family=Merienda+One&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(20, 37, 55);
+}
+
+.quick-info {
+  display: flex;
+  min-height: 2vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quick-info a {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.quick-info i {
+  display: flex;
+  align-items: center;
+  color: rgb(243, 245, 246);
+  padding: 0 50px;
+  height: 100%;
+  transition: .2s ease-in-out;
+}
+
+.quick-info i:hover {
+  color: rgb(128, 117, 255);
+}
+
+.shop-image {
+  position: relative;
+  background-image: url("../images/shop.PNG");
+  background-size: cover;
+  background-position: center;
+  margin-top: 5px;
+  box-shadow: 0px 3px 15px;
+  height: 60vh;
+}
+
+.shop-image ul {
+  list-style: none;
+}
+
+.shop-image .image-buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 40%;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.shop-image .image-buttons i {
+  color: rgb(243, 245, 246);
+  font-size: 3rem;
+  padding: 20px;
+  transition: .2s ease;
+}
+
+.shop-image .image-buttons i:hover {
+  background-color: rgba(128, 117, 255, .5);
+  border-radius: 20px;
+}
+
+.shop-image .nav-buttons {
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-image .nav-buttons button {
+  height: 5vh;
+  min-height: 40px;
+  width: 30vw;
+  border: none;
+  box-shadow: 0 2px 10px black;
+  background-color: rgba(34, 61, 89, .9);
+  font-size: 1.4rem;
+  color: rgb(243, 245, 246);
+  cursor: pointer;
+  font-family: 'Kite One', sans-serif;
+
+  transition: .2s ease;
+}
+
+button.left:hover {
+  border-radius: 0 0 30px 0;
+  background-color: rgba(128, 117, 255);
+}
+
+button.right:hover {
+  border-radius: 0 0 0 30px;
+  background-color: rgba(128, 117, 255);
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .shop-image .image-buttons {
+    display: none;
+  }
+}
+
+
+
+
