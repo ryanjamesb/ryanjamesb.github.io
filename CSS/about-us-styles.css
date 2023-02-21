@@ -39,6 +39,14 @@
 
 @media (max-width: 500px) {
   .about-us {
-    padding: 15px;
+    padding: 8px;
+  }
+
+  .about-us h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-us p {
+    font-size: 0.9rem;
   }
 }

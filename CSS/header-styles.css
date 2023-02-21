@@ -112,6 +112,16 @@ button.right:hover {
   }
 }
 
+@media (max-width: 500px) {
+  .shop-image .nav-buttons button {
+    font-size: 1.2rem;
+  }
+
+  .shop-image .image-buttons {
+    display: none;
+  }
+}
+
 
 
 
