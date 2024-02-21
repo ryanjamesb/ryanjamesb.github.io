@@ -1,42 +1,36 @@
-// Google Map Modal
-const mapModal = document.getElementById('map-modal');
-const mapModalOpenButton = document.getElementById('map-open-button');
-const mapModalCloseButton = document.getElementById('map-close-button');
+const navButtons = document.querySelector(".nav-buttons");
+const dropdownButton = document.querySelector(".dropdown");
 
+var slideshowImages = document.getElementsByClassName("slide");
+let slideIndex = 0;
+slideshow();
 
-// Contact Modal
-const contactModal = document.getElementById('contact-modal');
-const contactModalOpenButton = document.getElementById('contact-open-button');
-const contactModalCloseButton = document.getElementById('contact-close-button');
+function dropdownMobileMenu() {
+    navButtons.classList.toggle("active");
+    dropdownButton.classList.toggle("active");
+    if (navButtons.style.maxHeight) {
+        navButtons.style.maxHeight = null;
+    }
+    else {
+        navButtons.style.maxHeight = navButtons.scrollHeight + "px";
+    }
 
-// Map Modal functions
-mapModalOpenButton.addEventListener('click', () => {
-  if (mapModal.classList.contains('active')) {
-    mapModal.classList.remove('active');
-  }
-  else {
-    mapModal.classList.add('active');
-  }
-})
+    if (dropdownButton.classList.contains("active")) {
+        dropdownButton.innerHTML = "<i class='fa-solid fa-x'></i>";
+    }
+    else {
+        dropdownButton.innerHTML = "<i class='fa-solid fa-bars'></i>";
+    }
+}
 
-mapModalCloseButton.addEventListener('click', () => {
-  if (mapModal.classList.contains('active')) {
-    mapModal.classList.remove('active');
-  }
-})
+function slideshow() {
+    for (let i = 0; i < slideshowImages.length; i++) {
+        slideshowImages[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slideshowImages.length - 1) { slideIndex = 0 }
 
-// Contact Modal functions
-contactModalOpenButton.addEventListener('click', () => {
-  if (contactModal.classList.contains('active')) {
-    contactModal.classList.remove('active');
-  }
-  else {
-    contactModal.classList.add('active');
-  }
-})
-
-contactModalCloseButton.addEventListener('click', () => {
-  if (contactModal.classList.contains('active')) {
-    contactModal.classList.remove('active');
-  }
-})
+    slideshowImages[slideIndex].style.display = "block";
+    setTimeout(slideshow, 7000);
+    
+}

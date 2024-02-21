@@ -1,0 +1,129 @@
+:root {
+    --color-primary: 74, 236, 123;
+    --color-neutral-100: 254, 252, 251;
+    --color-neutral-500: 72, 90, 120;
+    --color-neutral-700: 77, 80, 87;
+
+    --rgb-color-primary: rgb(var(--color-primary));
+    --rgb-color-neutral-100: rgb(var(--color-neutral-100));
+    --rgb-color-neutral-500: rgb(var(--color-neutral-500));
+    --rgb-color-neutral-700: rgb(var(--color-neutral-700));
+
+    --font-family-quicksand: 'Quicksand', sans-serif;
+    --font-family-rufina: 'Rufina', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    z-index: -1;
+    background-color: var(--rgb-color-neutral-100);
+    height: 200vh;
+    color: rgb(72, 90, 120);
+}
+
+.about-us-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 50px;
+    top: 60%;
+    height: max-content;
+    width: 100%;
+}
+
+.about-us-wrapper .section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: black;
+    width: 80%;
+    height: 50vh;
+    padding: 40px 40px;
+}
+
+.section img {
+    position: absolute;
+    width: 35vw;
+    
+    height: 35vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+img.who-we-are-image {
+    right: -20%;
+}
+
+img.what-we-do-image {
+    left: -20%;
+}
+
+.about-us-wrapper h2 {
+    font-family: var(--font-family-rufina);
+    margin-bottom: 20px;
+    width: 50%;
+    text-align: right;
+    border-bottom: solid 1px var(--rgb-color-primary);
+}
+
+.about-us-wrapper p {
+    width: 60%;
+    font-size: 1.3em;
+    line-height: 1.8;
+}
+
+.about-us-wrapper .what-we-do {
+    align-self: flex-end;
+    align-items: flex-end;
+    height: 60vh;
+}
+
+.what-we-do p {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.what-we-do ul {
+    flex: 2;
+    font-size: 1.3em;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.what-we-do li {
+    list-style: none;
+    text-align: center;
+    max-width: fit-content;
+}
+
+.what-we-do li a {
+    text-decoration: none;
+    color: var(--rgb-color-neutral-500);
+    background-color: rgba(var(--color-neutral-700), .3);
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.what-we-do li a:hover {
+    color: black;
+    background-color: var(--rgb-color-primary);
+}

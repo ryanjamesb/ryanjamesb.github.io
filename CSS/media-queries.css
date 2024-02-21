@@ -1,0 +1,52 @@
+/* When screen is smaller than 900px */
+
+@media screen and (max-width : 900px) {
+    .header-image {
+        display: none;
+    }
+
+    .slideshow-wrapper {
+        width: 100%;
+    }
+
+    .about-us-wrapper .section {
+        height: 70vh;
+    }
+
+    .section p {
+        font-size: .8em;
+    }
+    
+    .section h2 {
+        font-size: 1.6em;
+    }
+
+    .section ul li {
+        font-size: .6em;
+    }
+}
+
+/* When screen is larger than 900px */
+
+@media screen and (min-width : 900px) {
+    .welcome-title-wrapper {
+        display: none;
+    }
+
+    .slideshow-wrapper {
+        width: 90%
+    }
+}
+
+/* When screen is larger than 1280px */
+
+@media screen and (min-width: 1280px) {
+    .slideshow-wrapper {
+        width: 70%;
+        max-height: 50vh;
+    }
+
+    .about-us-wrapper {
+        top: 75%;
+    }
+}

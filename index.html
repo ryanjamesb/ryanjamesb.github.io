@@ -1,69 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./CSS/header-styles.css">
-  <link rel="stylesheet" href="./CSS/about-us-styles.css">
-  <link rel="stylesheet" href="./CSS/map-modal-styles.css">
-  <link rel="stylesheet" href="./CSS/contact-modal-styles.css">
-  <script src="https://kit.fontawesome.com/2db72fbc18.js" crossorigin="anonymous"></script>
-  <title>Bowker's Fiberglass</title>
+<!-- My Stylesheets and Other Links -->
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/2db72fbc18.js" crossorigin="anonymous"></script>
+
+    <!-- Open-props CSS Props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css"/>
+
+    <!-- My Stylesheets -->
+    <link rel="stylesheet" href="/CSS/index-styles.css">
+    <link rel="stylesheet" href="/CSS/header-styles.css">
+    <link rel="stylesheet" href="/CSS/title-styles.css">
+    <link rel="stylesheet" href="/CSS/media-queries.css">
+    <link rel="stylesheet" href="/CSS/slideshow-styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--JavaScript Link-->
+    <script src="/app.js" defer></script>
+
+    <!-- Web Info -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowker's Fiberglass</title>
 </head>
 <body>
-  <header>
-    <div class="quick-info">
-      <a href="#" id='map-open-button'><i class="fa-solid fa-map"></i></a>
-      <a href="mailto: martin@bowkersfiberglass.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://www.google.com/search?q=bowkers+fiberglass&rlz=1C1ONGR_enUS1042US1042&oq=Bowkers+Fiberglass&aqs=chrome.0.35i39j46i175i199i512j0i390l3j69i60l3.2341j0j7&sourceid=chrome&ie=UTF-8" target="_blank"><i class="fa-brands fa-google"></i></a>
-    </div>
-    <div class="map-modal" id="map-modal">
-      <div class="modal-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5854.470703877197!2d-86.01069887300514!3d42.80451236663811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881994a7dd26221b%3A0x5a594efa3d301565!2sBowkers%20Fiberglass!5e0!3m2!1sen!2sus!4v1676641345683!5m2!1sen!2sus" width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <button id="map-close-button"><i class="fa-solid fa-x"></i></button>
-      </div>
-    </div>
-    <div class="shop-image">
-      <ul class="image-buttons">
-        <li><i class="fa-solid fa-arrow-left"></i></li>
-        <li><i class="fa-solid fa-arrow-right"></i></li>
-      </ul>
-      <ul class="nav-buttons">
-        <li>
-          <button class="left" id="contact-open-button">Contact Us</button>
-          <div class="contact-modal" id="contact-modal">
-            <div class="modal-container">
-              <h2>Contact Information</h2>
-              <span><h3>Email : </h3>martin@bowkersfiberglass.com</span>
-              <span><h3>Address : </h3>1987 92nd Ave. Zeeland MI, 49464</span>
-              <span><h3>Phone : </h3>(616)218-1683</span>
-              <button id="contact-close-button"><i class="fa-solid fa-x"></i></button>
+    <header>
+        <img src="/Images/transparent-logo.png" alt="" class="header-image">
+        <nav>
+            <a class="dropdown" onclick="dropdownMobileMenu()"><i class="fa-solid fa-bars"></i></a>
+            <div class="nav-buttons">
+                <a href="index.html">Home</a>
+                <a href="#about-us">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a class="contact-style" href="contact.html">Contact</a>
             </div>
-          </div>
-        </li>
-        <li><button class="right">Gallery</button></li>
-      </ul>
+            <div class="welcome-title-wrapper">
+                <div class="welcome-title">
+                    <h1>Welcome to,</h1>
+                    <img src="Images/transparent-logo.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="slideshow-wrapper">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_1.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_2.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_3.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_4.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_5.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_6.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_7.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_8.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_9.JPG" alt="" class="slide">
+        <img src="/Images/88_Hinterhauler/88_Hinterhauler_10.JPG" alt="" class="slide">
     </div>
-  </header>
-  <div class="about-us">
-    <div class="about-us-text">
-      <h2>Welcome to Bowker's Fiberglass</h2>
-      <p>
-        Welcome to Bowker’s Fiberglass, a family owned and operated business with more than 50 years experience in the industry. We are located in Zeeland, Michigan just 15 minutes West of Grand Rapids. We've been servicing West Michigan for over 20 years. Our shop is big enough to facilitate most trailerable boats up to 50′ in length. We specialize in boats and personal watercraft, but if it’s fiberglass we can fix it.
-      </p>
-      <p>
-        A picture is worth a thousand words, and you can see lots of them on our site, but what doesn’t show through is how committed we are to each of our customers.
-      </p>
-      <p>
-        We know that in the long run taking care of each individual is what establishes a family business. Our business was built on word of mouth from our many satisfied customers. Come experience the personal attention only a smaller business can provide.
-      </p>
+
+    <div class="about-us-wrapper" id="about-us">
+        <div class="who-we-are section">
+            <h2>Who We Are</h2>
+            <p>Bowker's Fiberglass is a family 
+                owned and operated business with 
+                more than 50 years experience in the 
+                industry. We are located in Zeeland, 
+                Michigan just 15 minutes West of Grand Rapids. 
+                We have been servicing West Michigan for over 15 years. 
+                The shop is big enough to facilitate most trailerable boats 
+                up to 50' in length. We offer mobile service as well. 
+                We specialize in boats and personal watercraft, but if it's 
+                fiberglass we can fix it.
+            </p>
+            <img src="/Images/shop.PNG" alt="" class="who-we-are-image">
+        </div>
+        <div class="what-we-do section">
+            <h2>What We Do</h2>
+            <p>We offer a wide range of services from modification 
+                and fabrication to restoration and structural hull rebuilding. 
+                Click the buttons below for more information and pictures.
+            </p>
+            <ul>
+                <li><a href="#">Cosmetic / Structural</a></li>
+                <li><a href="#">Storm Boats / Restoration</a></li>
+                <li><a href="#">Rotting Hull Rebuild</a></li>
+
+                <li><a href="#">Modification / Fabrication</a></li>
+                <li><a href="#">Warranty Work</a></li>
+            </ul>
+            <img src="/Images/shop.PNG" alt="" class="what-we-do-image">
+        </div>
     </div>
-  </div>
-  <footer>
-    <div class="test">test</div>
-  </footer>
-  <script src="./app.js"></script>
 </body>
 </html>
